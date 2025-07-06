@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-gray-900">
+    <div class="min-h-screen flex items-center justify-center">
         <div class="text-center">
             <!-- Loading Text -->
             <h1 class="text-4xl font-semibold text-white mb-8">Loading...</h1>
@@ -31,7 +31,7 @@
         transform: scale(1);
     }
     100% {
-        background-color: oklch(55.4% 0.046 257.417); /* blue-500 - filled */
+        background-color: oklch(55.4% 0.046 257.417); /* gray-500 - filled */
         transform: scale(1.1);
     }
 }
@@ -46,3 +46,19 @@
 .square-7 { animation-delay: 2.6s; }
 .square-8 { animation-delay: 2.7s; }
 </style>
+
+<script setup>
+const route = useRoute();
+const authLevel = route.query.level;
+
+setTimeout(() => {
+    switch (authLevel) {
+        case 'Auth-0':
+            navigateTo('auth-0')
+            break;
+        default:
+            navigateTo('/')
+            break;
+    }
+},4000)
+</script>
