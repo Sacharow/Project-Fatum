@@ -23,14 +23,10 @@
         <Cog />
     </button>
     <div class="absolute top-20 right-10 p-6 bg-gray-700 rounded-lg transisiotn duration-300 max-w-100 text-sm" :style=" {opacity: settingsActive? '1.0' : '0.0'} ">
-        <p>R3Vlc3QtUHJpb3JpdHkwCg==</p>
-        <p>PASSWORD: Qui,exveniamelit.Monolitiam</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span class="hover:text-white">Qui,</span> expedita! Doloribus, earum ad, adipisci et voluptates ullam quo iusto, eos sapiente ipsum officiis nobis placeat aperiam <span class="hover:text-white">ex</span> tempore veritatis expedita.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut consequatur dolore fugiat vitae quod ut libero <span class="hover:text-white">veniam</span> consequuntur similique rerum modi vel consectetur at quasi sunt ullam illo, perferendis exercitationem?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing <span class="hover:text-white">elit.</span> Iusto, rerum accusantium magnam consequuntur repellendus quibusdam qui numquam, ratione pariatur laborum consectetur dolorum? <span class="hover:text-white">Monolitia</span> officiis ab deserunt assumenda recusandae adipisci veniam!</p>
-        <button class="cursor-pointer transform duration-200 hover:text-white">
-            <p>Privacy Settings</p>
-        </button>
+        <p>PASSWORD: <span class="hover:text-white">LaudantiumdolorilloEligendihic</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="hover:text-white">Laudantium</span> nam, asperiores recusandae fuga alias amet necessitatibus in, quae, similique excepturi vero unde magni quasi corporis veritatis mollitia! Obcaecati, velit. Porro.</p>
+        <p>Lorem ipsum <span class="hover:text-white">dolor</span> sit, amet consectetur adipisicing elit. Doloremque repellendus rem eligendi similique quisquam repudiandae quaerat incidunt quis adipisci est placeat, consequatur <span class="hover:text-white">illo</span> possimus fugiat corrupti voluptas, obcaecati, earum vel.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="hover:text-white">Eligendi</span>, iste consequatur minima aut nam placeat reprehenderit. Nesciunt quae cum voluptate temporibus ipsum <span class="hover:text-white">hic</span> praesentium unde illum doloribus culpa, magni distinctio!</p>
     </div>
 </template>
 
@@ -58,7 +54,7 @@ const ActivateSettings = () => {
 
 const handleLogin = () => {
     console.log('Login attempted with:', loginData.value);
-    if (loginData.value.trim() == "R3Vlc3QtUHJpb3JpdHkwCg==") { // Guest-Priority0
+    if (loginData.value.trim() == "LaudantiumdolorilloEligendihic") { // Guest-Priority0
         navigateTo({
             path: '/transition',
             query: { level: 'Auth-0'}

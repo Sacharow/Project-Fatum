@@ -6,14 +6,14 @@
         <p class="text-lg mt-4">You are logged in as a guest with limited access.</p>
         <p class="text-lg mt-2">Please navigate to the main page for more features.</p>
         <div class="grid grid-cols-3 gap-4">
-            <div class="rounded-xl p-3 w-100 bg-gray-600">
+            <div class="rounded-xl p-3 w-100 bg-gray-600 flex justify-center">
                 <NuxtLink to="file">File</NuxtLink>
             </div>
-            <div class="rounded-xl p-3 w-100 bg-gray-600">
-                <p>2</p>
+            <div class="rounded-xl p-3 w-100 bg-gray-600 flex justify-center">
+                <NuxtLink to="file">File</NuxtLink>
             </div>
-            <div class="rounded-xl p-3 w-100 bg-gray-600">
-                <p>3</p>
+            <div class="rounded-xl p-3 w-100 bg-gray-600 flex justify-center">
+                <NuxtLink to="file">File</NuxtLink>
             </div>
         </div>
     </div>
