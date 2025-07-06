@@ -4,70 +4,45 @@
             <!-- Loading Text -->
             <h1 class="text-4xl font-semibold text-white mb-8">Loading...</h1>
             
-            <!-- Block Loading Animation -->
+            <!-- Analog Square Loading Animation -->
             <div class="flex space-x-2 justify-center">
-                <div class="w-4 h-4 bg-blue-500 rounded animate-pulse delay-0"></div>
-                <div class="w-4 h-4 bg-blue-500 rounded animate-pulse delay-75"></div>
-                <div class="w-4 h-4 bg-blue-500 rounded animate-pulse delay-150"></div>
-                <div class="w-4 h-4 bg-blue-500 rounded animate-pulse delay-300"></div>
-                <div class="w-4 h-4 bg-blue-500 rounded animate-pulse delay-500"></div>
-            </div>
-            
-            <!-- Alternative: Bouncing Blocks -->
-            <div class="flex space-x-2 justify-center mt-8">
-                <div class="w-3 h-8 bg-green-500 rounded animate-bounce delay-0"></div>
-                <div class="w-3 h-8 bg-green-500 rounded animate-bounce delay-100"></div>
-                <div class="w-3 h-8 bg-green-500 rounded animate-bounce delay-200"></div>
-                <div class="w-3 h-8 bg-green-500 rounded animate-bounce delay-300"></div>
-            </div>
-            
-            <!-- Loading Bar -->
-            <div class="w-64 h-2 bg-gray-700 rounded-full mt-8 mx-auto">
-                <div class="h-full bg-blue-500 rounded-full loading-bar"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-1"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-2"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-3"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-4"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-5"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-6"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-7"></div>
+                <div class="w-6 h-6 bg-gray-700 rounded square-loader square-8"></div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-.loading-bar {
-    width: 0%;
-    animation: loading 2s ease-in-out infinite;
+.square-loader {
+    animation: square-appear 0.5s ease-in-out forwards;
+    background-color: #374151; /* gray-700 */
 }
 
-@keyframes loading {
+@keyframes square-appear {
     0% {
-        width: 0%;
-    }
-    50% {
-        width: 100%;
+        background-color: #374151; /* gray-700 - empty */
+        transform: scale(1);
     }
     100% {
-        width: 0%;
+        background-color: oklch(55.4% 0.046 257.417); /* blue-500 - filled */
+        transform: scale(1.1);
     }
 }
 
-/* Custom block animation */
-.animate-pulse {
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(0.8);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-}
-
-.delay-0 { animation-delay: 0ms; }
-.delay-75 { animation-delay: 75ms; }
-.delay-100 { animation-delay: 100ms; }
-.delay-150 { animation-delay: 150ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-500 { animation-delay: 500ms; }
+/* Sequential delays for each square */
+.square-1 { animation-delay: 0s; }
+.square-2 { animation-delay: 0.3s; }
+.square-3 { animation-delay: 0.5s; }
+.square-4 { animation-delay: 0.6s; }
+.square-5 { animation-delay: 1.5s; }
+.square-6 { animation-delay: 2.5s; }
+.square-7 { animation-delay: 2.6s; }
+.square-8 { animation-delay: 2.7s; }
 </style>
